@@ -51,7 +51,7 @@ jobs:
         run: |
           file=$(find -type f -name "*.mp4" -or -type f -name "*.mkv");
           fileName=${file:2}
-          rclone copy "$file" ob:📥youtube-archive/LuthfiHalimawan --config rclone.conf 
+          rclone copy "$file" ix:NON2.yt/LuthfiHalimawan --config rclone.conf 
       - name: Clear cache
         if: steps.upload.outcome == 'success'
         uses: actions/github-script@v6
